@@ -1,0 +1,98 @@
+# Translators:
+# SD SkyKlouD <koongchi135@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Budgie Welcome\n"
+"POT-Creation-Date: 2016-02-27 12:48+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: SD SkyKlouD <koongchi135@gmail.com>, 2017\n"
+"Language-Team: Korean (https://www.transifex.com/ubuntu-budgie/teams/72251/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Report-Msgid-Bugs-To : you@example.com\n"
+
+#: budgie-applets.html:13
+msgid "Budgie Desktop Applets"
+msgstr "Budgie 데스크톱 애플릿"
+
+#: budgie-applets.html:15
+msgid ""
+"Logout and login after installing applets. Open Raven - Budgie Settings - "
+"Panel to add applets"
+msgstr "애플릿을 설치한 후 로그아웃하고 로그인 하세요. Raven - Budgie 설정 - 패널에서 애플릿을 추가할 수 있습니다."
+
+#: budgie-applets.html:20
+msgid "Haste Applet"
+msgstr "Haste 애플릿"
+
+#: budgie-applets.html:25
+msgid ""
+"Post any text – be it code or prose – to various services directly from your"
+" desktop."
+msgstr "데스크톱에서 다양한 서비스로 바로 텍스트를 붙여넣으세요."
+
+#: budgie-applets.html29, 51, 73, 95, 117, 139, 161
+msgid "Remove"
+msgstr "제거"
+
+#: budgie-applets.html32, 54, 76, 98, 120, 142, 164
+msgid "Install Applet"
+msgstr "애플릿 설치"
+
+#: budgie-applets.html35, 57, 79, 101, 123, 145, 167
+msgid "Applying Changes..."
+msgstr "변경 사항 적용 중..."
+
+#: budgie-applets.html:42
+msgid "Screenshot Applet"
+msgstr "스크린샷 애플릿"
+
+#: budgie-applets.html:47
+msgid ""
+"An advanced screenshot utility for capturing and organizing screenshots."
+msgstr "스크린샷을 찍고 관리하기 위한 고급 스크린샷 유틸리티입니다."
+
+#: budgie-applets.html:64
+msgid "Calendar Applet"
+msgstr "달력 애플릿"
+
+#: budgie-applets.html:69
+msgid "Show date and time and when clicked show a calendar in a popover."
+msgstr "날짜와 시간을 표시하고 클릭하면 팝업으로 달력을 표시합니다."
+
+#: budgie-applets.html:86
+msgid "Brightness Control Applet"
+msgstr "밝기 조절 애플릿"
+
+#: budgie-applets.html:91
+msgid "Allows you to control the screen brightness."
+msgstr "화면 밝기를 조정합니다."
+
+#: budgie-applets.html:108
+msgid "Pixel-Saver Applet"
+msgstr "Pixel Saver 애플릿"
+
+#: budgie-applets.html:113
+msgid ""
+"Hides the title bar from maximized windows and creates a new one inside the "
+"panel."
+msgstr "최대화된 창에서 제목 표시줄을 패널에 대신 표시합니다."
+
+#: budgie-applets.html:130
+msgid "Global Menu Applet"
+msgstr "전역 메뉴 애플릿"
+
+#: budgie-applets.html:135
+msgid "Moves the menu from applications into the panel."
+msgstr "애플리케이션 목록에 있는 메뉴를 패널로 옮깁니다."
+
+#: budgie-applets.html:152
+msgid "Weather Applet"
+msgstr "날씨 애플릿"
+
+#: budgie-applets.html:157
+msgid "Displays the weather on your panel."
+msgstr "패널에 날씨 정보를 표시합니다."
