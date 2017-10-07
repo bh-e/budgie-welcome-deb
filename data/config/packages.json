@@ -39,48 +39,20 @@
 	  "pixel-applet" : {
 		  "packages" : ["budgie-pixel-saver-applet"],
 		  "repos" : {
+			  "xenial" : ["ppa:budgie-remix/ppa"],
 			  "yakkety" : ["ppa:budgie-remix/ppa"],
               "zesty" : ["ppa:ubuntubudgie/backports"],
               "artful" : ["ppa:ubuntubudgie/backports"]
 		  }
-	  },
-	  "appmenu-applet" : {
-		  "packages" : ["budgie-appmenu-applet"],
-		  "repos" : {
-              "zesty" : ["ppa:ubuntubudgie/backports"],
-              "artful" : ["universe"]
-		  }
-	  },
-	  "weather-applet" : {
-		  "packages" : ["budgie-weather-applet"],
-		  "repos" : {
-              "zesty" : ["ppa:ubuntubudgie/backports"],
-              "artful" : ["ppa:ubuntubudgie/backports"]
-		  }
-	  },
-      "sysmonitor-applet" : {
-		  "packages" : ["budgie-sysmonitor-applet"],
-		  "repos" : {
-              "xenial": ["ppa:budgie-remix/ppa"],
-              "zesty" : ["ppa:ubuntubudgie/backports"],
-              "artful" : ["ppa:ubuntubudgie/backports"]
-		  }
-	  },
-      "wmmover-applet" : {
-		  "packages" : ["budgie-wmmover-applet"],
-		  "repos" : {
-              "abc": ["ppa:budgie-remix/ppa"],
-              "def" : ["ppa:ubuntubudgie/backports"],
-              "ghi" : ["ppa:ubuntubudgie/backports"]
-		  }
 	  }
+
   },
   "recommendations" : {
     "snap" : {
       "packages" : ["snapd"]
     },
     "flatpak" : {
-      "packages" : ["flatpak", "xdg-desktop-portal-gtk", "gnome-software-plugin-flatpak"],
+      "packages" : ["flatpak", "xdg-desktop-portal-gtk"],
       "repos" : {
         "xenial" : ["ppa:alexlarsson/flatpak"]
       }
@@ -159,10 +131,13 @@
       "packages" : ["gufw","net-tools"]
     },
     "firefox" : {
-      "packages" : ["firefox"]
+      "packages" : ["firefox-esr"]
     },
     "chromium" : {
-      "packages" : ["chromium-browser"]
+      "packages" : ["chromium"]
+    },
+    "libreoffice" : {
+      "packages" : ["libreoffice"]
     },
     "chrome" : {
       "packages" : ["google-chrome-stable"],
@@ -197,8 +172,7 @@
   },
   "default" : {
     "arc-theme" : {
-      "packages" : ["arc-theme", "pocillo-icon-theme"],
-      "size" : 60
+      "packages" : ["arc-theme", "pocillo-icon-theme"]
     },
     "material-theme" : {
       "packages" : ["adapta-gtk-theme", "paper-cursor-theme", "paper-icon-theme", "fonts-noto"],
@@ -212,10 +186,7 @@
     "material-vimix-theme" : {
       "packages" : ["vimix-gtk-themes", "paper-cursor-theme", "paper-icon-theme", "fonts-noto"],
       "repos" : {
-        "xenial" : ["ppa:snwh/pulp", "ppa:noobslab/themes"],
-        "yakkety" : ["ppa:snwh/pulp", "ppa:noobslab/themes"],
-        "zesty" : ["ppa:snwh/pulp", "ppa:noobslab/themes"],
-        "artful" : ["ppa:ubuntubudgie/backports", "ppa:noobslab/themes"]
+        "all" : ["ppa:snwh/pulp", "ppa:noobslab/themes"]
       }
     },
     "material-flat-plat-theme" : {
@@ -235,20 +206,6 @@
       },
     "ceti-2-theme" : {
       "packages" : ["ceti-2-theme"]
-      },
-    "evopop-theme" : {
-      "packages" : ["evopop-gtk-theme", "paper-icon-theme", "fonts-noto"],
-      "repos" : {
-        "zesty" : ["ppa:ubuntubudgie/backports", "ppa:snwh/pulp"],
-        "artful" : ["ppa:ubuntubudgie/backports"]
-        }
-      },
-    "osx-arc-theme" : {
-      "packages" : ["osx-arc-darker", "osx-arc-plus", "osx-arc-shadow", "osx-arc-white", "arc-osx-icon-theme", "paper-icon-theme", "fonts-noto"],
-      "repos" : {
-        "zesty" : ["ppa:ubuntubudgie/backports", "ppa:snwh/pulp"],
-        "artful" : ["ppa:ubuntubudgie/backports"]
-        }
       }
   }
 }

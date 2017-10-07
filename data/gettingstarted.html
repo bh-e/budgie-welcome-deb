@@ -12,7 +12,6 @@
 <body class="backdrop-simple hidden">
   <div id="wrapper">
     <div id="title-inject">&zwnj;Getting Started&zwnj;</div>
-    <div id="first-run" class="first-run"></div>
     <a id="index-overlay" onclick="indexClose()"></a>
     <div id="index-menu">
       <a id="index-close" onclick="indexClose();"><i class="material-icons">&#xE14C;</i></a>
@@ -50,11 +49,14 @@
         </a>
       </div>
       <br><h5>&zwnj;Familiarity&zwnj;</h5>
+      <a class="btn btn-inverse index-btn" onclick='changePage("performance", "&zwnj;Performance tuning&zwnj;")'>
+        <i class="material-icons">&#xE90F;</i> &zwnj;Performance tuning&zwnj;
+      </a>
       <a class="btn btn-inverse index-btn" onclick='changePage("customize","&zwnj;Customization&zwnj;")'>
         <i class="material-icons">&#xE8A4;</i> &zwnj;Customization&zwnj;
       </a>
-      <a class="btn btn-inverse index-btn" onclick='changePage("browsers", "&zwnj;Browser Ballot&zwnj;")'>
-        <i class="material-icons">&#xE8D9;</i> &zwnj;Browser Ballot&zwnj;
+      <a class="btn btn-inverse index-btn" onclick='changePage("browsers", "&zwnj;Applications&zwnj;")'>
+        <i class="material-icons">&#xE8D9;</i> &zwnj;Applications&zwnj;
       <a class="btn btn-inverse index-btn" onclick='changePage("shortcuts","&zwnj;Keyboard Shortcuts&zwnj;")'>
         <i class="material-icons">&#xE312;</i> &zwnj;Keyboard Shortcuts&zwnj;
       </a>
@@ -173,7 +175,7 @@
             you completely run out of memory without anywhere to swap.&zwnj;</p>
             <p><span class="unofficial-only">&zwnj;By default, a swap partition is created based on the size of your RAM. For example, if you have
             2 GiB of RAM, then 2 GiB of hard disk space will be reserved for swap at the end of the drive.&zwnj;</span></p>
-
+            
             <p><span class="official-only">&zwnj;By default, a swap file is created based on the size of your RAM. For example, if you have
             2 GiB of RAM, then 2 GiB of hard disk space will be reserved for the swap file.  A separate swap partition is no
             longer required to be created.&zwnj;</span></p>
@@ -509,8 +511,8 @@
                   <li>&zwnj;Fix blank screen issues.&zwnj;</li>
                 </ul>
 
-                <p>&zwnj;Proprietary drivers are known as "binary blobs". Certain hardware may experience adverse behavior,
-                causing more issues than the open source drivers, such as:&zwnj;</p>
+                <p>&zwnj;Proprietary drivers are known as "binary blobs". Certain hardware may experience worse behavior,
+                causing more issues then the open source drivers, such as:&zwnj;</p>
                 <ul>
                   <li>&zwnj;Failing to boot to the graphical desktop.&zwnj;</li>
                   <li>&zwnj;Broken drivers after an upgrade.&zwnj;</li>
@@ -763,10 +765,33 @@
         </div>
       </div>
 
-      <!-- Browser Ballot -->
+      <!-- Performance tuning -->
+      <div id="performance" class="topicContents">
+        <div class="row">
+          <div class="col-md-12">
+            <p>&zwnj;The <span name="distro-name"></span> comes with cool effects and animations to provide you a
+            smooth user experience. However, these effects may not play well inside Virtual Machines and
+            in low resource system.&zwnj;</p>
+
+            <p>&zwnj;So we provide an option to toggle animation and remote networking to get improved performance
+            inside Virtual Machines and low resource computers.&zwnj;</p>
+
+            <div class="text-md-center">
+              <a id="performance-install" class="btn btn-danger" onclick="cmd('script?enable_performance');cmd('')">
+                <i class="material-icons">&#xE909;</i><span class="button-text">&zwnj;Disable animations & Remote display&zwnj;</span>
+              </a>
+              <a id="performance-remove" class="btn btn-success" onclick="cmd('script?disable_performance');cmd('')">
+                <i class="material-icons">&#xE834;</i><span class="button-text">&zwnj;Enable animations & Remote display&zwnj;</span>
+              </a>
+              <span id="performance-status" class="hidden"><img src="img/welcome/processing.gif" width="24px"/> &zwnj;Applying Changes...&zwnj;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applications -->
       <div id="browsers" class="topicContents">
-        &zwnj;To improve the amount of customizability, <span name="distro-name"></span> allows you to install/remove popular
-        web browsers with a single click.&zwnj;
+        &zwnj;Most of you wonder what applications are used in Linux for word processing, browser, torrent, Image editing etc. .&zwnj;
         <div class="row text-md-center">
           <div class="col-md-6 application">
             <h4>Chromium</h4>
@@ -792,6 +817,21 @@
               <span class="material-icons">&#xE2C0;</span><span class="button-text">&zwnj;Install&zwnj;</span>
             </a>
             <a id="firefox-remove" class="btn btn-danger" onclick="cmd('remove?firefox');cmd('')">
+              <span class="material-icons">&#xE872;</span><span class="button-text">&zwnj;Remove&zwnj;</span>
+            </a>
+            <span id="firefox-status" class="hidden">
+              <img src="img/welcome/processing.gif" style="width:24px" /> &zwnj;Applying Changes...&zwnj;
+            </span>
+          </div>
+          <div class="col-md-6 application">
+            <h4>&zwnj;Firefox&zwnj;</h4>
+            <img src="img/applications/firefox.svg"/>
+            <p class="text-md-justify">&zwnj;Mozilla Firefox is a free and open-source web browser, developed
+            by the Mozilla Foundation - a not for profit organisation.  It is highly popular targeting multiple platforms.&zwnj;</p>
+            <a id="firefox-install" class="btn btn-success" onclick="cmd('install?libreoffice');cmd('')">
+              <span class="material-icons">&#xE2C0;</span><span class="button-text">&zwnj;Install&zwnj;</span>
+            </a>
+            <a id="firefox-remove" class="btn btn-danger" onclick="cmd('remove?libreoffice');cmd('')">
               <span class="material-icons">&#xE872;</span><span class="button-text">&zwnj;Remove&zwnj;</span>
             </a>
             <span id="firefox-status" class="hidden">
@@ -927,12 +967,6 @@
             <p>&zwnj;These shortcuts apply in most applications.&zwnj;</p>
 
             <table class="shortcuts">
-              <tr class="1710">
-                <td>
-                  <b class="btn btn-xs disabled">F12</b>
-                </td>
-                <td>&zwnj;Toggle Tilix Quake Mode&zwnj;</td>
-              </tr>
               <tr>
                 <td>
                   <b class="btn btn-xs disabled">&zwnj;Ctrl&zwnj;</b>
